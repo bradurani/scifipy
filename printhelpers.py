@@ -11,7 +11,7 @@ def print_dict(d):
 def summarize(list_nums):
     print "n: %s" % len(list_nums)
     print "mean: %s" % np.mean(list_nums)
-    print "variance: %s" % np.variance(list_nums)
+    print "variance: %s" % np.var(list_nums)
     print "std dev: %s" % np.std(list_nums)
 
 
