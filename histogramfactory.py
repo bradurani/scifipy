@@ -37,7 +37,7 @@ class HistogramFactory(object):
         return self._sorted_dict(norm_hist)
 
     def diff_histogram(self, hist1, hist2):
-        diff = [(bin[0], bin[1] - hist2[bin[0]]) for bin in hist1.items() if bin[0] in hist2 ]
+        diff = [(bin[0], bin[1] - hist2[bin[0]]) for bin in hist1.items() if bin[0] in hist2 ]git
         return self._sorted_dict(diff)
 
     @staticmethod
