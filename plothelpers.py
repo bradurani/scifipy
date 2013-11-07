@@ -32,3 +32,8 @@ class PlotHelpers(object):
         diffs = [bins[n]-bins[n-1] for n in range(1, len(bins))]
         diffs.append(np.mean(diffs)) #add one for the last bar
         return diffs
+
+    def histogram(self, hist):
+        plt.bar(hist.keys(), hist.values(), self.width_list(hist), facecolor='g', alpha=0.5)
+        plt.grid(True)
+        plt.show()

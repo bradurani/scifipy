@@ -36,6 +36,10 @@ class HistogramFactory(object):
         norm_hist = map(lambda i: (i[0], i[1] * factor), hist.items())
         return self._sorted_dict(norm_hist)
 
+    def diff_histogram(self, hist1, hist2):
+        diff = [(bin[0], bin[1] - hist2[bin[0]]) for bin in hist1.items() if bin[0] in hist2 ]
+        return self._sorted_dict(diff)
+
     @staticmethod
     def _sorted_dict(tuple_list):
         return collections.OrderedDict(sorted(tuple_list))
